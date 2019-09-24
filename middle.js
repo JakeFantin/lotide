@@ -1,22 +1,7 @@
 // Dependencies
-const eqArrays =  function(listA, listB){
-  if(listA.length !== listB.length) return false;
-  for(let i = 0; i < listA.length; i++){
-    if(listA[i] !== listB[i]){
-      return false;
-    }
-  }
-  return true;
-}
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`💎️ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`💥️ Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
 
+const assertArraysEqual = require('./assertArraysEqual');
 // Actual Function
 const middle = function(list){
   middleBit = [];
@@ -29,11 +14,11 @@ const middle = function(list){
   }
   return middleBit;
 }
-
+ module.exports = middle;
 // Test Function
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3,4]); // => [3, 4]
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([]), []);
-assertArraysEqual(middle([1]), []);
+// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
+// assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3,4]); // => [3, 4]
+// assertArraysEqual(middle([1, 2]), []);
+// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+// assertArraysEqual(middle([]), []);
+// assertArraysEqual(middle([1]), []);

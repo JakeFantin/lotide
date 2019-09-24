@@ -1,11 +1,4 @@
-// Function Implementation
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`💎️ Assertion Passed: " ${actual} === ${expected}`);
-  } else {
-    console.log(`💥️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual').default;
 
 const eqArrays =  function(listA, listB){
   if(listA.length !== listB.length) return false;
@@ -16,3 +9,5 @@ const eqArrays =  function(listA, listB){
   }
   return true;
 }
+
+module.exports = eqArrays;

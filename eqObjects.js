@@ -34,34 +34,35 @@ const eqObjects = (obj1, obj2) => {
   }
 };
 
+module.exports = eqObjects;
 //Testing code
 
-const df = {
-  i: 3,
-  j: [4, 5]
-};
-const fd = {
-  j: [4, 5],
-  i: 3
-};
+// const df = {
+//   i: 3,
+//   j: [4, 5]
+// };
+// const fd = {
+//   j: [4, 5],
+//   i: 3
+// };
 
-const cs = {
-  i: 3,
-  j: [4, 5, fd]
-};
-const cf = {
-  i: 3,
-  j: [4, 5, df]
-};
+// const cs = {
+//   i: 3,
+//   j: [4, 5, fd]
+// };
+// const cf = {
+//   i: 3,
+//   j: [4, 5, df]
+// };
 
-const cdd = { c: "1", d: ["2", ['245', 3]] };
-const dcc = { d: ["2", ['245', 3]], c: "1" };
-console.log(eqObjects(cdd, dcc), true); // => true
+// const cdd = { c: "1", d: ["2", ['245', 3]] };
+// const dcc = { d: ["2", ['245', 3]], c: "1" };
+// console.log(eqObjects(cdd, dcc), true); // => true
 
-const cdb = { c: 1, d: [cs, 3] };
-const dcb = { d: [cf, 3], c: 1 };
-console.log(eqObjects(cdb, dcb), true); // => true
+// const cdb = { c: 1, d: [cs, 3] };
+// const dcb = { d: [cf, 3], c: 1 };
+// console.log(eqObjects(cdb, dcb), true); // => true
 
-console.log(eqObjects(5, 5), true); // => true
-console.log(eqObjects("apple","apple"), true); // => true
+// console.log(eqObjects(5, 5), true); // => true
+// console.log(eqObjects("apple","apple"), true); // => true
 
